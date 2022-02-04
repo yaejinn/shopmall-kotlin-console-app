@@ -22,7 +22,9 @@ class ShoppingCategory {
             selectedCategory = readLine()
         }
         if (selectedCategory == "#") {
-            //TODO(1)장바구니로 이동
+            //장바구니로 이동
+            val shoppingCart = ShoppingCart()
+            shoppingCart.showCartItems()
         } else {
             if(categories.contains(selectedCategory)){
                 //카톄고리 상품 목록 보여주기
