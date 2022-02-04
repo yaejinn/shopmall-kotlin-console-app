@@ -6,7 +6,7 @@ import data.Product
 import extensions.getNotEmptyInt
 import extensions.getNotEmptyString
 
-class ShoppingProductList{
+class ShoppingProductList:Screen(){
     private val products = arrayOf(
         Product("패션","겨울 패딩"),
         Product("패션","겨울 바지"),
@@ -28,6 +28,8 @@ class ShoppingProductList{
      * 사용자가 입력한 카테고리 정보를 받아 해당 카테고리의 상품을 출력
      */
     fun showProducts(selectedCategory: String) {
+        //스택에 저장
+        ScreenStack.push(this)
         // 지정된 카테고리의 상품 목록을 가져온다.
         val categoryProducts = categories[selectedCategory]
 

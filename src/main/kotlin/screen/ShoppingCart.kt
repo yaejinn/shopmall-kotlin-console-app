@@ -6,10 +6,13 @@ import data.CartItems
 /*
  * 장바구니의 내용을 화면에 출력
  */
-class ShoppingCart {
+class ShoppingCart:Screen() {
     private val products = CartItems.products
 
     fun showCartItems(){
+        //스택에 저장
+        ScreenStack.push(this)
+
         if(products.isNotEmpty()){
             //장바구니의 상품 목록 출력
             println(
