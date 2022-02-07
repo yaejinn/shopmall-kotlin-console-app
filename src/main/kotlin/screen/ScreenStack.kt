@@ -16,9 +16,11 @@ object ScreenStack {
     }
 
     //스택에서 꺼내지 않고 내용만 확인
-    fun peak():Screen? {
+    fun peek():Screen? {
         return screenStack.lastOrNull()
     }
+
+
 }
 
 sealed class Screen
